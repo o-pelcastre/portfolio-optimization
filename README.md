@@ -16,7 +16,22 @@ This project implements advanced portfolio optimization techniques in Python, ba
 ## ⚙️ Requirements
 
 - Python 3.8+  
-- Libraries: `numpy`, `pandas`, `cvxpy`, `scipy`, `scikit-learn`, `matplotlib`  
+- Libraries:
+  - `yfinance`
+  - `pandas`
+  - `pandas_datareader`
+  - `matplotlib`
+  - `numpy`
+  - `seaborn`
+  - `arch`
+  - `plotly`
+  - `statsmodels`
+  - `nbformat`
+  - `nbconvert`
+  - `ipykernel`
+  - `ipywidgets`
+  - `scipy`
+  - `kaleido`
 - Optional: `networkx` for clustering, `yfinance` for data ingestion  
 
 Install via:
@@ -28,11 +43,10 @@ pip install -r requirements.txt
 
 ```
 .
-├── data/               # Price/returns datasets
-├── optimization/       # Core modules (estimators, optimizers, constraints)
-├── strategies/         # Workflow scripts and notebook demos
-├── tests/              # Unit tests (pytest compatible)
-├── notebooks/          # Jupyter notebooks illustrating use cases
+├── data/                           # multifactor fama french data
+├── exports/                        # exports CSVs and PDFs of results
+├── port_details.txt                # user details for portfolio optimization notebook
+├── portfolio-optimization.ipynb    # notebook containing code for port optim.
 └── README.md
 ```
 
@@ -44,6 +58,7 @@ from optimization.expected_returns import mean_historical_return
 from optimization.risk_models import sample_covariance
 from optimization.optimizers import EfficientFrontier
 
+# will need to update directory to reflect where you are getting data
 prices = pd.read_csv('data/prices.csv', index_col='Date', parse_dates=True)
 mu = mean_historical_return(prices)
 Sigma = sample_covariance(prices)
@@ -54,15 +69,6 @@ weights = ef.max_sharpe()
 print(weights)
 ```
 
-## 📊 Backtesting Example
-
-In `strategies/backtest_portfolio.py`, a walk‑forward simulation is performed:
-
-1. Estimate mu and Sigma over rolling window  
-2. Optimize portfolio  
-3. Track performance out-of-sample  
-
-Use `pytest` to verify functionality and `matplotlib` to plot returns curves.
 
 ## 🧩 Extend & Customize
 
@@ -71,14 +77,6 @@ Use `pytest` to verify functionality and `matplotlib` to plot returns curves.
 - Introduce portfolio-level constraints (sector, ESG, turnover)  
 - Swap linear/quadratic solvers in `cvxpy`
 
-## ✅ Testing & Continuous Integration
-
-- Extensive unit coverage in `tests/` using `pytest`  
-- Run all tests:
-  ```bash
-  pytest
-  ```
-- CI pipelines configured for test validation on each commit
 
 ## 📚 References
 

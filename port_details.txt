@@ -15,12 +15,10 @@ Investment Constraints:
 US_Stocks: <= 65%
 US_Stocks: > 10%
 US_Bonds: <= 50%
-US_Bonds: > 10%
+US_Bonds: > 20%
 Dev_Stocks_ExUS: <= 40%
 Dev_Bonds_ExUS: <= 40%
 EM_Bonds: <= 15%
 EM_Stocks: <= 15%
 Cash: <= 10%
-Cash: > 5%
 Gold: <= 15%
-Gold: > 5%

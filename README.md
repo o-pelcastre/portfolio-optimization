@@ -47,18 +47,19 @@ To set up your environment:
 
 ### 🔧 User Customization Instructions
 
-Before running the notebook:
+Before running the notebook modify portfolio_details.txt:
 
 - **Tickers**:  
   In `portfolio-optimization.ipynb`, update the `tickers` list to match the assets you wish to analyze. These will be used to download pricing data and calculate expected returns and risk.
 
 - **Constraints**:  
-  Modify or extend the constraints section (e.g. weight bounds, sector exposures, turnover limits) to suit your portfolio rules. Most constraints are passed directly into the optimizer methods.
+  Modify constraints section (e.g. weight bounds) to suit your portfolio rules. Weights are the only constraints currently implemented into the logic
 
 - **Risk-Free Rate**:  
   Set the appropriate risk-free rate for Sharpe ratio calculations. This is typically done in a variable such as:
 
   ```python
+  #this value will be parsed from the portfolio_details.txt
   risk_free_rate = 0.03  # update based on your region or target benchmark
   ```
 

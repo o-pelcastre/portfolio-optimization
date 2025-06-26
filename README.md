@@ -4,12 +4,26 @@ This project implements portfolio optimization using Monte Carlo simulation and 
 
 ## 🔍 Features
 
-- **Mean–Variance Optimization**: Efficient frontier, minimum variance, maximum Sharpe ratio  
-- **Covariance Estimators**: Sample, shrinkage, exponential, semi-covariance  
-- **Regularization**: Enforce sparsity through L1/L2 objectives  
-- **Custom Constraints**: Short/long bounds, turnover/weight limits, market neutrality, sector exposure  
-- **Backtesting Support**: Plug into historical price data workflows  
-- **Modular Design**: Swap models with minimal code changes
+- **Monte Carlo Portfolio Simulation**  
+  Generates thousands of random portfolios to explore the risk-return space.
+
+- **Sharpe Ratio Optimization**  
+  Selects the portfolio with the highest risk-adjusted return.
+
+- **Custom Portfolio Constraints**  
+  Reads user-defined constraints (e.g., weight limits) to restrict allocation.
+
+- **Weekly Return Calculations**  
+  Uses 10 years of weekly close data for realistic performance modeling.
+
+- **CAPM and Multi-Factor Regressions**  
+  Runs factor regressions to assess exposure to systematic risk.
+
+- **Drawdown Visualization**  
+  Displays drawdown periods alongside cumulative returns.
+
+- **Performance PDF Export**  
+  Summarizes analysis into a polished, shareable report.
 
 ## ⚙️ Requirements
 
@@ -71,7 +85,7 @@ Before running the notebook modify portfolio_details.txt:
 .
 ├── exports/                        # exports CSVs and PDFs of results
 ├── ff_factor_data/                 # multifactor fama french data
-├── port_details.txt                # user details for portfolio optimization notebook
+├── portfolio_details.txt           # user details for portfolio optimization notebook
 ├── portfolio-optimization.ipynb    # notebook containing code for port optim.
 └── README.md
 └── requirements.txt                #includes a list of all needed libraries

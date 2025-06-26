@@ -73,6 +73,7 @@ Before running the notebook:
 ├── port_details.txt                # user details for portfolio optimization notebook
 ├── portfolio-optimization.ipynb    # notebook containing code for port optim.
 └── README.md
+└── requirements.txt                #includes a list of all needed libraries
 ```
 
 ## 🚀 Quickstart

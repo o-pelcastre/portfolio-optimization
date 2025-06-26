@@ -1,0 +1,15 @@
+yfinance
+pandas
+pandas_datareader
+matplotlib
+numpy
+seaborn
+arch
+plotly
+statsmodels
+nbformat
+nbconvert
+ipykernel
+ipywidgets
+scipy
+kaleido

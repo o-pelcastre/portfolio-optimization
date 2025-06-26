@@ -1,0 +1,25 @@
+Tickers:
+US_Stocks: VOO
+US_Bonds: AGG
+Dev_Stocks_ExUS: SCHF
+Dev_Bonds_ExUS: BNDX
+EM_Stocks: VWO
+EM_Bonds: EMB
+Cash: BIL
+Gold: GLD
+
+
+Risk-free Rate:
+0.0441
+
+Investment Constraints:
+US_Stocks: <= 65%
+US_Stocks: > 10%
+US_Bonds: <= 50%
+US_Bonds: > 20%
+Dev_Stocks_ExUS: <= 40%
+Dev_Bonds_ExUS: <= 40%
+EM_Bonds: <= 15%
+EM_Stocks: <= 15%
+Cash: <= 10%
+Gold: <= 15%
